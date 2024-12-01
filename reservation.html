@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .reservation-container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .btn-back {
+            background-color: #ff6600;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #e65c00;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="reservation-container">
+     <!-- Back Button -->
+     <a href="rooms.html" class="btn btn-back">Back </a>
+    <h2>Complete Your Reservation</h2>
+
+
+    <!-- Room details from URL query -->
+    <div id="room-details" class="mb-4">
+        <img id="room-image" class="img-fluid mb-3" alt="Room Image" />
+        <h3 id="room-name">Room Name</h3>
+        <p id="room-price">Price: $0</p>
+    </div>
+
+    <!-- Reservation Form -->
+    <form id="reservation-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="check-in" class="form-label">Check-in Date</label>
+            <input type="date" class="form-control" id="check-in" required>
+        </div>
+        <div class="mb-3">
+            <label for="check-out" class="form-label">Check-out Date</label>
+            <input type="date" class="form-control" id="check-out" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    </form>
+
+ 
+</div>
+
+<script>
+    // Get query parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const roomName = urlParams.get('room');
+    const roomPrice = urlParams.get('price');
+    const roomImage = urlParams.get('image');
+
+    // Set room details dynamically
+    document.getElementById('room-name').textContent = roomName ? roomName.replace(/([A-Z])/g, ' $1').toUpperCase() : "Room";
+    document.getElementById('room-price').textContent = roomPrice ? `Price: $${roomPrice}` : "Price: $0";
+    document.getElementById('room-image').src = roomImage || "default-image.jpg"; // Use a default image if none is provided
+
+    // Handle form submission
+    document.getElementById('reservation-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const checkIn = document.getElementById('check-in').value;
+        const checkOut = document.getElementById('check-out').value;
+
+        alert(`Booking confirmed! \nName: ${name}\nEmail: ${email}\nRoom: ${roomName}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}`);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

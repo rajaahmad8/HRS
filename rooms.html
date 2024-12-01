@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Rooms</title>
+    <style>
+        /* Header Styling */
+        .header-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #FFFAF0;
+            padding: 10px;
+            position: relative;
+        }
+
+        .btn-back {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: darkgray;
+            color: black;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 45px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Image Styling */
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Section Title Styling */
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #FF6347;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu-item {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .menu-item h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .menu-item .price {
+            font-size: 16px;
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background: linear-gradient(135deg, #FF6347, #FF4500); /* Gradient background */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px; /* Rounded corners */
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none; /* Remove default border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            letter-spacing: 1px;
+        }
+
+        /* Hover Effect */
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #FF4500, #FF6347); /* Reverse gradient on hover */
+            transform: translateY(-5px); /* Slight lift effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+            cursor: pointer;
+        }
+
+        /* Active Button Effect */
+        .btn-primary:active {
+            background: linear-gradient(135deg, #FF6347, #FF4500); /* Keep the gradient active */
+            transform: translateY(0); /* Reset the hover effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reset shadow */
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .col-md-3 {
+                flex: 0 0 48%;
+                max-width: 48%;
+            }
+
+            .header-line h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-line">
+        <a href="project.html" class="btn-back">Back</a>
+        <h1>Room Details</h1>
+    </div>
+
+    <!-- Executive Suites Section -->
+    <section id="menu" class="bg-light section-padding">
+        <div class="container">
+            <h2>Executive Suites</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Executive Retreat">
+                        <h5>Executive Retreat</h5>
+                        <p class="price">$12.99</p>
+                        <a href="reservation.html?room=business2&price=150&image=https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=600" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Premium Suite">
+                        <h5>Premium Suite</h5>
+                        <p class="price">$12.99</p>
+                        <a href="reservation.html?room=business2&price=150&image=https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=600" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Elite Chamber">
+                        <h5>Elite Chamber</h5>
+                        <p class="price">$12.99</p>
+                        <a href="reservation.html?room=business2&price=150&image=https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=600" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/f5/8c/f8/heritage-retreat.jpg?w=700&h=-1&s=1" alt="Heritage Retreat">
+                        <h5>Heritage Retreat</h5>
+                        <p class="price">$12.99</p>
+                        <a href="reservation.html?room=business2&price=150&image=https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/f5/8c/f8/heritage-retreat.jpg?w=700&h=-1&s=1" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Stays Section -->
+    <section id="menu" class="bg-light section-padding">
+        <div class="container">
+            <h2>Traditional Stays</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://img.freepik.com/premium-photo/classic-heritage-bedroom-design-bedroom-rich-heritage_1034820-46151.jpg" alt="Classic Heritage Room">
+                        <h5>Classic Heritage Room</h5>
+                        <p class="price">$8.99</p>
+                        <a href="reservation.html?room=heritage1&price=120&image=https://img.freepik.com/premium-photo/classic-heritage-bedroom-design-bedroom-rich-heritage_1034820-46151.jpg" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://assets.architecturaldigest.in/photos/61de9b8d0f339dca4bd2963f/16:9/w_2560%2Cc_limit/Manipal%2520home.jpg" alt="Traditional Bungalow">
+                        <h5>Traditional Bungalow</h5>
+                        <p class="price">$10.99</p>
+                        <a href="reservation.html?room=heritage2&price=130&image=https://assets.architecturaldigest.in/photos/61de9b8d0f339dca4bd2963f/16:9/w_2560%2Cc_limit/Manipal%2520home.jpg" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://st.hzcdn.com/simgs/pictures/living-rooms/rustic-cottage-by-sisson-dupont-and-carder-img~6b01fec7097a25ae_14-3749-1-c0c27f8.jpg" alt="Rustic Cottage">
+                        <h5>Rustic Cottage</h5>
+                        <p class="price">$9.99</p>
+                        <a href="reservation.html?room=heritage3&price=110&image=https://st.hzcdn.com/simgs/pictures/living-rooms/rustic-cottage-by-sisson-dupont-and-carder-img~6b01fec7097a25ae_14-3749-1-c0c27f8.jpg" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/515588699.jpg?k=4448fcc64412a8544bf1974f821d6994004b79c2915f32dbc820156d369cfc86&o=&hp=1" alt="Countryside Stay">
+                        <h5>Countryside Stay</h5>
+                        <p class="price">$11.99</p>
+                        <a href="reservation.html?room=heritage4&price=140&image=https://cf.bstatic.com/xdata/images/hotel/max1024x768/515588699.jpg?k=4448fcc64412a8544bf1974f821d6994004b79c2915f32dbc820156d369cfc86&o=&hp=1" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lounge Zone Section -->
+    <section id="menu" class="bg-light section-padding">
+        <div class="container">
+            <h2>Lounge Zone</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://cdn.shopify.com/s/files/1/0225/2528/0331/collections/Living_Room_-_Luxe_Lounge_-_Axel_Leather_sofa_db8a6d53-f757-477a-ae0e-5d0d5f449667.jpg?v=1684259268" alt="Luxe Lounge">
+                        <h5>Luxe Lounge</h5>
+                        <p class="price">$15.99</p>
+                        <a href="reservation.html?room=lounge1&price=160&image=https://cdn.shopify.com/s/files/1/0225/2528/0331/collections/Living_Room_-_Luxe_Lounge_-_Axel_Leather_sofa_db8a6d53-f757-477a-ae0e-5d0d5f449667.jpg?v=1684259268" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/underscored-admirals-club-dca-lounge-pavilion.jpeg?q=h_900,w_1600,x_0,y_0" alt="VIP Lounge">
+                        <h5>VIP Lounge</h5>
+                        <p class="price">$17.99</p>
+                        <a href="reservation.html?room=lounge2&price=180&image=https://media.cnn.com/api/v1/images/stellar/prod/underscored-admirals-club-dca-lounge-pavilion.jpeg?q=h_900,w_1600,x_0,y_0" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://i.pinimg.com/550x/8f/8a/d2/8f8ad2d3d27b4a30cf18ac627f00265b.jpg" alt="Chill Zone">
+                        <h5>Chill Zone</h5>
+                        <p class="price">$14.99</p>
+                        <a href="reservation.html?room=lounge3&price=170&image=https://i.pinimg.com/550x/8f/8a/d2/8f8ad2d3d27b4a30cf18ac627f00265b.jpg" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="menu-item">
+                        <img src="https://www.helenasmith.uk/wp-content/uploads/2024/03/Wow-factor-lounge.jpg" alt="Luxury Lounge">
+                        <h5>Luxury Lounge</h5>
+                        <p class="price">$20.99</p>
+                        <a href="reservation.html?room=lounge4&price=200&image=https://www.helenasmith.uk/wp-content/uploads/2024/03/Wow-factor-lounge.jpg" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Book Nest. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+</body>
+
+</html>

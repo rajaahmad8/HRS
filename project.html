@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK NEST | Hotel & Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #FFD700; /* Yellow color */
+}
+
+.navbar-brand, .nav-link {
+    color: #000000 !important; /* Black text for brand and links */
+}
+
+.nav-link:hover {
+    color: #FFD700 !important; /* Yellow on hover */
+    background-color: #000000; /* Black background on hover */
+    border-radius: 5px; /* Optional: Border radius for hover effect */
+}
+
+.carousel-inner img {
+    width: 80%; /* Adjust this percentage to decrease the width */
+    height: 1600; /* Maintains aspect ratio */
+    max-height: 700px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensures the images cover the area without distortion */
+    margin: auto; /* Center the image */
+}
+.more-details-btn {
+        display: block;
+        margin-left: auto; /* Aligns to the right in a flex or block container */
+        width: fit-content; /* Optional: only as wide as the content */
+        padding: 10px 20px;
+        background-color: #007bff; /* Button color */
+        color: #fff; /* Text color */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        font-weight: bold;
+    }
+    .more-details-btn:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+    .login{
+        border-color: #FFD700;
+        background-color: #000000;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        width: 100px;
+        font-size: larger;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <img src="https://booknestwa.com/tbn24/wp-content/uploads/2024/02/BookNest_OpenGraph-Image1200x630.png" alt="BOOK NEST" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reservations">Reservations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button type="button" onclick="window.location.href='login.html'" class="btn btn-primary rounded-pill px-4 py-2 ms-3">Login</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Additional Styling -->
+<style>
+    .navbar {
+        background-color: #ffffff; /* White background for navbar */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        color: #333; /* Dark text color for links */
+        font-weight: 500;
+        padding: 12px 18px;
+        transition: color 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #00bcd4; /* Teal color on hover */
+        transform: scale(1.05); /* Slight zoom effect */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #00bcd4; /* Change color of toggle icon */
+    }
+
+    .login {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        background-color: #00bcd4;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .login:hover {
+        background-color: #008c8c; /* Darker shade of teal on hover */
+        transform: translateY(-3px); /* Slight lifting effect */
+        cursor: pointer;
+    }
+
+    /* Custom Logo */
+    .navbar-brand img {
+        height: 40px;
+        object-fit: contain;
+    }
+
+    /* Shadow on Navbar */
+    .navbar.shadow-lg {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Larger, softer shadow */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+        }
+        .login {
+            margin-top: 10px;
+        }
+    }
+</style>
+
+
+    <!-- Hero/Slider Section -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg" class="d-block w-100" alt="Hotel Interior">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to BOOK NEST</h5>
+                    <p>Experience comfort and luxury.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/22/21/restaurant-1837150_1280.jpg" class="d-block w-100" alt="Restaurant Interior">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Dine with us</h5>
+                    <p>Enjoy exquisite meals in a beautiful ambiance.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2023/03/29/10/27/hotel-7885138_960_720.jpg" class="d-block w-100" alt="Special Event">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Special Events</h5>
+                    <p>Book your events and make them memorable.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+<!-- Reservations Section -->
+<section id="reservations" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-center mb-5 text-dark">Make Your Reservation</h2>
+      <form>
+          <div class="row g-4">
+              <div class="col-md-4">
+                  <label for="reservationDate" class="form-label text-dark">Select Date</label>
+                  <input type="date" id="reservationDate" class="form-control shadow-sm" required>
+              </div>
+              <div class="col-md-4">
+                  <label for="reservationTime" class="form-label text-dark">Select Time</label>
+                  <input type="time" id="reservationTime" class="form-control shadow-sm" required>
+              </div>
+              <div class="col-md-4">
+                  <label for="guests" class="form-label text-dark">Number of Guests</label>
+                  <input type="number" id="guests" class="form-control shadow-sm" placeholder="1" min="1" max="10" required>
+              </div>
+          </div>
+          <div class="mt-4 text-center">
+              <button type="submit" class="btn btn-primary btn-lg px-5 py-3 shadow-sm">Check Availability</button>
+          </div>
+      </form>
+      <!-- Integrated real-time availability check would be implemented here -->
+  </div>
+</section>
+
+<style>
+  #reservations {
+    background: linear-gradient(135deg, #f0f4f8, #e4eff5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  .btn-lg {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+
+  /* Add a subtle hover effect on the form inputs */
+  .form-control:hover {
+    border-color: #007bff;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-label {
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+  }
+</style>
+
+    <!-- Room Showcase Section -->
+<section id="rooms" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 text-dark">Our Rooms</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <img src="https://image-tc.galaxy.tf/wijpeg-dghgmolkfh6t706p9wohdl5ow/testing-100.jpg" class="card-img-top rounded-4" alt="Room 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Deluxe Room</h5>
+                        <p class="card-text">A luxurious room with all amenities for a perfect stay.</p>
+                        <a href="reservation.html?room=deluxe&price=200&image=https://image-tc.galaxy.tf/wijpeg-dghgmolkfh6t706p9wohdl5ow/testing-100.jpg" class="btn btn-primary btn-lg">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <img src="https://media.onyx-hospitality.com/-/media/project/amari/common/property/bangkok/hotel-photos/stay/club_one-bedroom_executive-suite/club_one-bedroom_executive-suite.jpg?rev=f77a66aa2885434b89d6f4f5328526c1" class="card-img-top rounded-4" alt="Room 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Executive Suite</h5>
+                        <p class="card-text">Spacious suite with a king-sized bed.</p>
+                        <a href="reservation.html?room=executive&price=300&image=https://media.onyx-hospitality.com/-/media/project/amari/common/property/bangkok/hotel-photos/stay/club_one-bedroom_executive-suite/club_one-bedroom_executive-suite.jpg?rev=f77a66aa2885434b89d6f4f5328526c1" class="btn btn-primary btn-lg">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <img src="https://rivieramaya.grandvelas.com/resourcefiles/suites-subpage-snippet/2-bedroom-family-suite-nature-view.jpg" class="card-img-top rounded-4" alt="Room 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Family Suite</h5>
+                        <p class="card-text">Comfortable and spacious, perfect for family stays.</p>
+                        <a href="reservation.html?room=family&price=250&image=https://rivieramaya.grandvelas.com/resourcefiles/suites-subpage-snippet/2-bedroom-family-suite-nature-view.jpg" class="btn btn-primary btn-lg">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="rooms.html" class="btn btn-outline-primary btn-lg px-4 py-2">More Details</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Section Background & Layout */
+    #rooms {
+        background: linear-gradient(135deg, #f8f9fa, #e0e5eb);
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-img-top:hover {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .card-text {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-primary {
+        border-color: #007bff;
+        color: #007bff;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .btn-primary, .btn-outline-primary {
+            width: 100%;
+        }
+    }
+</style>
+
+
+   
+<!-- Menu Section -->
+<section id="menu" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 text-dark">Our Menu</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item rounded-4 shadow-lg p-3 bg-white">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQggU_ihi4BgSybHXPBfCWU1KOzT3_zdYAQ&s" class="img-fluid rounded-4 mb-3" alt="Starter">
+                    <h5 class="text-primary">Starters</h5>
+                    <p>Fresh, light, and tasty.</p>
+                    <p class="price text-muted">$12.99</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item rounded-4 shadow-lg p-3 bg-white">
+                    <img src="https://www.southernliving.com/thmb/KLv2GAL15FwFl82lhQVAYcIRmsQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Southern-Living_27386_ST_-Spring-Mix_19664-66db92e1ec044cf98250712d7a764303.jpg" class="img-fluid rounded-4 mb-3" alt="Main Course">
+                    <h5 class="text-primary">Main Course</h5>
+                    <p>Hearty meals to satisfy your hunger.</p>
+                    <p class="price text-muted">$19.99</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item rounded-4 shadow-lg p-3 bg-white">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2021/06/summer-desserts.jpg" class="img-fluid rounded-4 mb-3" alt="Dessert">
+                    <h5 class="text-primary">Desserts</h5>
+                    <p>Sweet delights to end your meal.</p>
+                    <p class="price text-muted">$9.99</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item rounded-4 shadow-lg p-3 bg-white">
+                    <img src="https://www.beanilla.com/wp/wp-content/uploads/2022/06/RefreshingDrinks.jpg" class="img-fluid rounded-4 mb-3" alt="Drinks">
+                    <h5 class="text-primary">Drinks</h5>
+                    <p>Refreshing beverages.</p>
+                    <p class="price text-muted">$4.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="foodmenu.html" class="btn btn-outline-primary btn-lg px-4 py-2 rounded-pill">More Details</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    #menu {
+        background-color: #f8f9fa;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .menu-item {
+        transition: all 0.3s ease-in-out;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu-item img {
+        height: 200px; /* Fixed height */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Ensures images are cropped proportionally */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-item img:hover {
+        transform: scale(1.05);
+    }
+
+    .menu-item h5 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    .btn-outline-primary {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        border-radius: 25px;
+        border-color: #007bff;
+        color: #007bff;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .menu-item {
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-primary {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Events Section -->
+<section id="events" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 text-dark">Upcoming Events</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card rounded-4 shadow-lg border-0">
+                    <img src="https://www.windowworld.com/uploads/images/news/new-years-eve-friends-sparklers.jpg" class="card-img-top rounded-4" alt="Event 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">New Year's Eve Party</h5>
+                        <p class="card-text">Celebrate the New Year at BOOK NEST!</p>
+                        <div id="countdown1" class="countdown"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-4 shadow-lg border-0">
+                    <img src="https://crescosafe.com/wp-content/uploads/2024/07/summer-BBQ.webp" class="card-img-top rounded-4" alt="Event 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Summer BBQ</h5>
+                        <p class="card-text">Join us for a sizzling BBQ event this summer.</p>
+                        <div id="countdown2" class="countdown"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-4 shadow-lg border-0">
+                    <img src="https://www.wienscellars.com/wp-content/uploads/2024/06/960x0-1.jpg" class="card-img-top rounded-4" alt="Event 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Wine Tasting Evening</h5>
+                        <p class="card-text">Indulge in fine wines and gourmet food pairings.</p>
+                        <div id="countdown3" class="countdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="events.html" class="btn btn-outline-primary btn-lg px-4 py-2 rounded-pill">More Details</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    #events {
+        background-color: #f8f9fa;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .card {
+        transition: all 0.3s ease-in-out;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-top {
+        height: 220px;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-img-top:hover {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    .countdown {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    .btn-outline-primary {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        border-radius: 25px;
+        border-color: #007bff;
+        color: #007bff;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-primary {
+            width: 100%;
+        }
+    }
+</style>
+
+
+   <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://media.istockphoto.com/id/638494402/photo/the-best-mates-and-team-mates.jpg?s=2048x2048&w=is&k=20&c=sqapC02YYgrq_v2KsUT_RvN01cvt7v7yxcDX17bqpj0=" class="img-fluid rounded" alt="About Us Image" style="max-height: 300px;">
+                </div>
+                <div class="col-md-6">
+                    <h2>About BOOK NEST</h2>
+                    <p>Welcome to BOOK NEST, a one-of-a-kind experience where the comfort of a hotel meets the culinary delights of a top-tier restaurant. Whether you're here to dine or stay, we offer a luxurious environment tailored to your needs.</p>
+                    <p>Our mission is to provide an unforgettable experience, blending comfort, elegance, and delicious food in one place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+<!-- Contact Section -->
+<section id="contact" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center mb-5 text-dark">Contact Us</h2>
+        <div class="row g-4">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <form action="submit_form.php" method="post" class="bg-white p-4 rounded-4 shadow-lg">
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-success">Your Name</label>
+                        <input type="text" class="form-control rounded-4" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-success">Email address</label>
+                        <input type="email" class="form-control rounded-4" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label text-success">Message</label>
+                        <textarea class="form-control rounded-4" id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg px-4 py-2 rounded-pill w-100">Send Message</button>
+                </form>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-md-6 text-center mx-auto">
+                <h5 class="text-success">Visit Us</h5>
+                <p class="mb-4">1234 Book Nest St, Cityville, ABC 12345</p>
+                <h5 class="text-success">Operating Hours</h5>
+                <p class="mb-4">Mon - Fri: 9 AM - 9 PM</p>
+                <p class="mb-4">Sat - Sun: 10 AM - 10 PM</p>
+                <h5 class="text-success">Follow Us</h5>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-dark me-3 fs-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-dark me-3 fs-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-dark fs-3"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #contact {
+        background-color: #f8f9fa;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .form-control {
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 10px rgba(46, 139, 87, 0.5);
+        border-color: #2e8b57;
+    }
+
+    .btn-success {
+        font-size: 1.1rem;
+        border-radius: 25px;
+        padding: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #238d4e;
+        transform: translateY(-3px);
+    }
+
+    .social-icons i {
+        transition: all 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #2e8b57;
+        transform: scale(1.1);
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .btn-success {
+            width: 100%;
+        }
+
+        .social-icons i {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+   <!-- Google Map -->
+<section id="map" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Find Us Here</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="map-container shadow-lg rounded-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250449845859!2d144.95592321552243!3d-37.81720974201153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f2b68e0d%3A0x204cf0b4fbdbf5d!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614764830287!5m2!1sen!2sau" 
+                        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #map {
+        background-color: #f8f9fa;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .map-container iframe:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2e8b57;  /* Emerald green for the header */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .map-container iframe {
+            height: 250px;  /* Adjust the map size on small screens */
+        }
+    }
+</style>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-light">Home</a></li>
+          <li><a href="#about" class="text-light">About Us</a></li>
+          <li><a href="#menu" class="text-light">Menu</a></li>
+          <li><a href="#rooms" class="text-light">Rooms</a></li>
+          <li><a href="#contact" class="text-light">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase">Newsletter</h5>
+        <form action="subscribe.php" method="post">
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your email" required>
+          </div>
+          <button type="submit" class="btn btn-outline-light w-100">Subscribe</button>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase">Instagram Feed</h5>
+        <div id="instagram-feed" class="text-center">
+          <!-- Embed Instagram feed widget or custom code -->
+          <p>Follow us on Instagram for the latest updates!</p>
+          <div class="social-icons">
+            <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p>&copy; 2024 <span class="font-weight-bold">BOOK NEST</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Add FontAwesome CDN -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+    footer {
+        background-color: #343a40; /* Darker shade for footer */
+        color: #f8f9fa; /* Light text for contrast */
+    }
+
+    footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #17a2b8; /* Light blue hover effect */
+    }
+
+    footer h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        color: #f8f9fa;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.1);
+        color: #17a2b8; /* Light blue hover effect */
+    }
+
+    .btn-outline-light {
+        border: 1px solid #f8f9fa;
+        color: #f8f9fa;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #17a2b8;
+        color: #ffffff;
+        border-color: #17a2b8;
+    }
+
+    footer .container {
+        max-width: 1140px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        footer .col-md-4 {
+            margin-bottom: 20px;
+        }
+
+        footer .social-icons {
+            text-align: center;
+        }
+    }
+</style>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+  
+</body>
+
+</html>
